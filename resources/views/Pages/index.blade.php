@@ -38,11 +38,11 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background-image: url(<?php echo $main->bc_img ?>)">
+        <header class="masthead" style="background-image: url(<?php echo (@$main->bc_img)?url($main->bc_img):asset("assets/img/bc_img.png")?>)">
             <div class="container">
-                <div class="masthead-heading text-uppercase">{{$main->title}}</div>
-                <div class="masthead-subheading">{{$main->sub_title}}</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="{{url($main->resume)}}">Resume</a>
+                <div class="masthead-heading text-uppercase">{{(@$main->title)?$main->title:"THE NEW ERA"}}</div>
+                <div class="masthead-subheading">{{(@$main->subtitle)?$main->sub_title:"THE NEW ERA BEGINS"}}</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):"#"}}">Resume</a>
             </div>
         </header>
         <!--Services-->
