@@ -38,11 +38,11 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead" style="background-image: url(<?php echo $main->bc_img?>);">
+        <header class="masthead" style="background-image: url(<?php echo (@$main->bc_img)?url($main->bc_img):asset("assets/img/bc_img.png")?>)">
             <div class="container">
-                <div class="masthead-heading text-uppercase" style="">{{$main->title}}</div>
-                <div class="masthead-subheading">{{$main->sub_title}}</div>
-                <a class="btn btn-primary btn-xl text-uppercase" href="{{url($main->resume)}}">Resume</a>
+                <div class="masthead-heading text-uppercase">{{(@$main->title)?$main->title:"THE NEW ERA"}}</div>
+                <div class="masthead-subheading">{{(@$main->subtitle)?$main->sub_title:"THE NEW ERA BEGINS"}}</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="{{(@$main->resume)?url($main->resume):"#"}}">Resume</a>
             </div>
         </header>
         <!--Services-->
@@ -123,7 +123,7 @@
                 </ul>
             </div>
         </section>
-        <section class="page-section bg-light" id="team">
+        <!--<section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
@@ -165,7 +165,7 @@
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- Clients-->
         <div class="py-5">
             <div class="container">
@@ -258,6 +258,8 @@
         </footer>
         <!-- Portfolio Modals-->
         <!-- Portfolio item 1 modal popup-->
+        @if (count($protfolios) > 0)
+        @foreach ($protfolios as $protfolio)
         <div class="portfolio-modal modal fade" id="portfolioModal<?php echo $protfolio->id?>" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -300,6 +302,8 @@
                 </div>
             </div>
         </div>
+        @endforeach
+        @endif
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
