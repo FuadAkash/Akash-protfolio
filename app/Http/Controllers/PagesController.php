@@ -25,7 +25,5 @@ class PagesController extends Controller
         return view('pages.index', compact('main', 'services', 'icon', 'protfolios', 'abouts'));
     }
     
-    public function print(){
-        return '<h1> Hello world </h1>';
-    }
+    
 }

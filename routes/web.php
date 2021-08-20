@@ -16,15 +16,11 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', [App\Http\Controllers\PagesController::class, 'index'])->name('home');
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\PagesController::class,'index'])->name('home');
 
 Route::prefix('admin')->group(function(){
     
     Route::get('/layout', [App\Http\Controllers\MainPagesController::class,'layout'])->name('admin.layout');
-
-    Route::get('/print', [App\Http\Controllers\PagesController::class,'print'])->name('print');
 
     Route::get('/main', [App\Http\Controllers\MainPagesController::class,'index'])->name('admin.main');
 
@@ -75,3 +71,5 @@ Route::post('/contact', [App\Http\Controllers\ContactController::class,'store'])
 
 
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
