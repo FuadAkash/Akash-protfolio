@@ -22,7 +22,7 @@ class PagesController extends Controller
         $icon = Icon::first();
         $protfolios = Protfolio::all();
         $abouts = About::all();
-        return view('/', compact('main', 'services', 'icon', 'protfolios', 'abouts'));
+        return view('pages.index', compact('main', 'services', 'icon', 'protfolios', 'abouts'));
     }
     
     

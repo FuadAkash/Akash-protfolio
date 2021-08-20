@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-5">
                         <label for="sub_title"><h4>Sub-Title</h4></label>
-                        <input type="text"  class="from-control" id="sub_title" name="sub_title" value="{{(@$main->subtitle)?$main->sub_title:"THE NEW ERA BEGINS"}}">
+                        <input type="text"  class="from-control" id="sub_title" name="sub_title" value="{{(@$main->sub_title)?$main->sub_title:"THE NEW ERA BEGINS"}}">
                     </div>
                     <div>
                     <h4>Upload Resume</h4>
