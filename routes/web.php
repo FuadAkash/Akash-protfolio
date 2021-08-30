@@ -20,7 +20,7 @@ Route::get('/', [App\Http\Controllers\PagesController::class,'index'])->name('')
 
 Route::prefix('admin')->group(function(){
     
-    Route::get('/layout', [App\Http\Controllers\PagesController::class,'layout'])->name('admin.layout');
+    Route::get('/layout', [App\Http\Controllers\MainPagesController::class,'layout'])->name('admin.layout');
 
     Route::get('/main', [App\Http\Controllers\MainPagesController::class,'index'])->name('admin.main');
 
