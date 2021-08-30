@@ -26,6 +26,4 @@ class PagesController extends Controller
         $abouts = About::all();
         return view('pages.index', compact('main', 'services', 'icon', 'protfolios', 'abouts'));
     }
-    
-    
 }
