@@ -20,7 +20,7 @@ Route::get('/', [App\Http\Controllers\PagesController::class,'index'])->name('')
 
 Route::prefix('admin')->group(function(){
     
-    Route::get('/layout', [App\Http\Controllers\MainPagesController::class,'layout'])->name('admin.layout');
+    Route::get('/layout', [App\Http\Controllers\PagesController::class,'layout'])->name('admin.layout');
 
     Route::get('/main', [App\Http\Controllers\MainPagesController::class,'index'])->name('admin.main');
 
@@ -69,7 +69,9 @@ Route::prefix('admin')->group(function(){
 
 Route::post('/contact', [App\Http\Controllers\ContactController::class,'store'])->name('contact.store');
 
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
