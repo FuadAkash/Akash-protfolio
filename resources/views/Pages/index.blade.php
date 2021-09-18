@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>{{$icon->ic_title}}</title>
+        <title>Fuad</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="<?php echo $icon->icon;?>" />
+        <link rel="icon" type="image/x-icon" href="assets/akash.ico"/>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -27,7 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="/login">Backend</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/layout">Backend</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -225,7 +225,7 @@
                         <div class="text-center text-white mb-3">
                             <div class="fw-bolder">Form submission successful!</div>
                             To activate this form, sign up at
-                            <br />
+                            <br/>
                             <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                         </div>
                     </div>
