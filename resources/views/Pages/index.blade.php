@@ -205,7 +205,7 @@
                                 <!-- Email address input-->
                                 <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid yet.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
